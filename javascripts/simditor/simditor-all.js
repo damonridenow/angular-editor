@@ -2673,7 +2673,8 @@
 
     TitleButton.prototype.name = 'title';
 
-    TitleButton.prototype.title = '标题文字';
+    //TitleButton.prototype.title = '标题文字';
+    TitleButton.prototype.title = 'Titolo';
 
     TitleButton.prototype.htmlTag = 'h1, h2, h3, h4';
 
@@ -2682,19 +2683,23 @@
     TitleButton.prototype.menu = [
       {
         name: 'normal',
-        text: '普通文本',
+        //text: '普通文本',
+        text: 'Normale',
         param: 'p'
       }, '|', {
         name: 'h1',
-        text: '标题 1',
+        //text: '标题 1',
+        text: 'h1',
         param: 'h1'
       }, {
         name: 'h2',
-        text: '标题 2',
+        //text: '标题 2',
+        text: 'h2',
         param: 'h2'
       }, {
         name: 'h3',
-        text: '标题 3',
+        //text: '标题 3',
+        text: 'h3',
         param: 'h3'
       }
     ];
@@ -2787,7 +2792,8 @@
 
     BoldButton.prototype.icon = 'bold';
 
-    BoldButton.prototype.title = '加粗文字';
+    //BoldButton.prototype.title = '加粗文字';
+    BoldButton.prototype.title = 'Bold';
 
     BoldButton.prototype.htmlTag = 'b, strong';
 
@@ -2832,7 +2838,8 @@
 
     ItalicButton.prototype.icon = 'italic';
 
-    ItalicButton.prototype.title = '斜体文字';
+    //ItalicButton.prototype.title = '斜体文字';
+    ItalicButton.prototype.title = 'Italic';
 
     ItalicButton.prototype.htmlTag = 'i';
 
@@ -2877,7 +2884,8 @@
 
     UnderlineButton.prototype.icon = 'underline';
 
-    UnderlineButton.prototype.title = '下划线文字';
+    //UnderlineButton.prototype.title = '下划线文字';
+    UnderlineButton.prototype.title = 'Sottolineato';
 
     UnderlineButton.prototype.htmlTag = 'u';
 
@@ -3060,7 +3068,8 @@
 
     OrderListButton.prototype.name = 'ol';
 
-    OrderListButton.prototype.title = '有序列表';
+    //OrderListButton.prototype.title = '有序列表';
+    OrderListButton.prototype.title = 'Lista numerata';
 
     OrderListButton.prototype.icon = 'list-ol';
 
@@ -3082,7 +3091,8 @@
 
     UnorderListButton.prototype.name = 'ul';
 
-    UnorderListButton.prototype.title = '无序列表';
+    //UnorderListButton.prototype.title = '无序列表';
+    UnorderListButton.prototype.title = 'Lista puntata';
 
     UnorderListButton.prototype.icon = 'list-ul';
 
@@ -3108,7 +3118,8 @@
 
     BlockquoteButton.prototype.icon = 'quote-left';
 
-    BlockquoteButton.prototype.title = '引用';
+    //BlockquoteButton.prototype.title = '引用';
+    BlockquoteButton.prototype.title = 'Citazione';
 
     BlockquoteButton.prototype.htmlTag = 'blockquote';
 
@@ -3185,7 +3196,8 @@
 
     CodeButton.prototype.icon = 'code';
 
-    CodeButton.prototype.title = '插入代码';
+    //CodeButton.prototype.title = '插入代码';
+    CodeButton.prototype.title = 'Preformattato';
 
     CodeButton.prototype.htmlTag = 'pre';
 
@@ -3322,7 +3334,8 @@
 
     LinkButton.prototype.icon = 'link';
 
-    LinkButton.prototype.title = '插入链接';
+    //LinkButton.prototype.title = '插入链接';
+    LinkButton.prototype.title = 'Link';
 
     LinkButton.prototype.htmlTag = 'a';
 
@@ -3383,7 +3396,8 @@
         $link = $('<a/>', {
           href: 'http://www.example.com',
           target: '_blank',
-          text: linkText || '链接文字'
+          //text: linkText || '链接文字'
+          text: linkText || 'Esempio'
         });
         if ($startBlock[0] === $endBlock[0]) {
           range.insertNode($link[0]);
@@ -3419,7 +3433,8 @@
       return _ref14;
     }
 
-    LinkPopover.prototype._tpl = "<div class=\"link-settings\">\n  <div class=\"settings-field\">\n    <label>文本</label>\n    <input class=\"link-text\" type=\"text\"/>\n    <a class=\"btn-unlink\" href=\"javascript:;\" title=\"取消链接\" tabindex=\"-1\"><span class=\"fa fa-unlink\"></span></a>\n  </div>\n  <div class=\"settings-field\">\n    <label>链接</label>\n    <input class=\"link-url\" type=\"text\"/>\n  </div>\n</div>";
+    //LinkPopover.prototype._tpl = "<div class=\"link-settings\">\n  <div class=\"settings-field\">\n    <label>文本</label>\n    <input class=\"link-text\" type=\"text\"/>\n    <a class=\"btn-unlink\" href=\"javascript:;\" title=\"取消链接\" tabindex=\"-1\"><span class=\"fa fa-unlink\"></span></a>\n  </div>\n  <div class=\"settings-field\">\n    <label>链接</label>\n    <input class=\"link-url\" type=\"text\"/>\n  </div>\n</div>";
+    LinkPopover.prototype._tpl = "<div class=\"link-settings\">\n  <div class=\"settings-field\">\n    <label>Testo</label>\n    <input class=\"link-text\" type=\"text\"/>\n    <a class=\"btn-unlink\" href=\"javascript:;\" title=\"Scollegare\" tabindex=\"-1\"><span class=\"fa fa-unlink\"></span></a>\n  </div>\n  <div class=\"settings-field\">\n    <label>Link</label>\n    <input class=\"link-url\" type=\"text\"/>\n  </div>\n</div>";
 
     LinkPopover.prototype.render = function() {
       var _this = this;
@@ -3493,7 +3508,8 @@
 
     ImageButton.prototype.icon = 'picture-o';
 
-    ImageButton.prototype.title = '插入图片';
+    //ImageButton.prototype.title = '插入图片';
+    ImageButton.prototype.title = 'Immagine';
 
     ImageButton.prototype.htmlTag = 'img';
 
@@ -3508,10 +3524,12 @@
     ImageButton.prototype.menu = [
       {
         name: 'upload-image',
-        text: '本地图片'
+        //text: '本地图片'
+        text: 'Carica immagine'
       }, {
         name: 'external-image',
-        text: '外链图片'
+        //text: '外链图片'
+        text: 'Immagine esterna'
       }
     ];
 
@@ -3596,7 +3614,8 @@
         if ($input) {
           $input.remove();
         }
-        return $input = $('<input type="file" title="上传图片" name="upload_file" accept="image/*">').appendTo($uploadItem);
+        //return $input = $('<input type="file" title="上传图片" name="upload_file" accept="image/*">').appendTo($uploadItem);
+        return $input = $('<input type="file" title="Carica file" name="upload_file" accept="image/*">').appendTo($uploadItem);
       };
       createInput();
       $uploadItem.on('click mousedown', 'input[name=upload_file]', function(e) {
@@ -3644,7 +3663,8 @@
           var prepare;
           prepare = function() {
             var $progress;
-            _this.popover.srcEl.val('正在上传...');
+            //_this.popover.srcEl.val('正在上传...');
+            _this.popover.srcEl.val('Attendi...');
             file.imgWrapper.append('<div class="mask"></div>');
             $progress = $('<div class="simditor-image-progress"><span></span></div>').appendTo(file.imgWrapper);
             if (!_this.editor.uploader.html5) {
@@ -3703,7 +3723,8 @@
             msg = result.msg;
           } catch (_error) {
             e = _error;
-            msg = '上传出错了';
+            //msg = '上传出错了';
+            msg = 'Caricamento/errore';
           }
           if ((typeof simple !== "undefined" && simple !== null) && (simple.message != null)) {
             simple.message(msg);
@@ -3778,7 +3799,8 @@
           width: width,
           height: height,
           'data-origin-src': src,
-          'data-origin-name': '图片',
+          //'data-origin-name': '图片',
+          'data-origin-name': 'Immagine',
           'data-origin-size': img.width + ',' + img.height
         });
         $wrapper.width(width).height(height);
@@ -3848,7 +3870,8 @@
   ImagePopover = (function(_super) {
     __extends(ImagePopover, _super);
 
-    ImagePopover.prototype._tpl = "<div class=\"link-settings\">\n  <div class=\"settings-field\">\n    <label>图片地址</label>\n    <input class=\"image-src\" type=\"text\"/>\n    <a class=\"btn-upload\" href=\"javascript:;\" title=\"上传图片\" tabindex=\"-1\">\n      <span class=\"fa fa-upload\"></span>\n    </a>\n  </div>\n</div>";
+    //ImagePopover.prototype._tpl = "<div class=\"link-settings\">\n  <div class=\"settings-field\">\n    <label>图片地址</label>\n    <input class=\"image-src\" type=\"text\"/>\n    <a class=\"btn-upload\" href=\"javascript:;\" title=\"上传图片\" tabindex=\"-1\">\n      <span class=\"fa fa-upload\"></span>\n    </a>\n  </div>\n</div>";
+    ImagePopover.prototype._tpl = "<div class=\"link-settings\">\n  <div class=\"settings-field\">\n    <label>Parametri immagine</label>\n    <input class=\"image-src\" type=\"text\"/>\n    <a class=\"btn-upload\" href=\"javascript:;\" title=\"Caricamento\" tabindex=\"-1\">\n      <span class=\"fa fa-upload\"></span>\n    </a>\n  </div>\n</div>";
 
     ImagePopover.prototype.offset = {
       top: 6,
@@ -3908,7 +3931,8 @@
         if (_this.input) {
           _this.input.remove();
         }
-        return _this.input = $('<input type="file" title="上传图片" name="upload_file" accept="image/*">').appendTo($uploadBtn);
+        //return _this.input = $('<input type="file" title="上传图片" name="upload_file" accept="image/*">').appendTo($uploadBtn);
+        return _this.input = $('<input type="file" title="upload_file" name="upload_file" accept="image/*">').appendTo($uploadBtn);
       };
       createInput();
       this.el.on('click mousedown', 'input[name=upload_file]', function(e) {
@@ -3949,7 +3973,8 @@
 
     IndentButton.prototype.icon = 'indent';
 
-    IndentButton.prototype.title = '向右缩进（Tab）';
+    //IndentButton.prototype.title = '向右缩进（Tab）';
+    IndentButton.prototype.title = 'Indenta（Tab）';
 
     IndentButton.prototype.status = function($node) {
       return true;
@@ -3977,7 +4002,8 @@
 
     OutdentButton.prototype.icon = 'outdent';
 
-    OutdentButton.prototype.title = '向左缩进（Shift + Tab）';
+    //OutdentButton.prototype.title = '向左缩进（Shift + Tab）';
+    OutdentButton.prototype.title = 'OUTDenta + Tab）';
 
     OutdentButton.prototype.status = function($node) {
       return true;
@@ -4005,7 +4031,8 @@
 
     HrButton.prototype.icon = 'minus';
 
-    HrButton.prototype.title = '分隔线';
+    //HrButton.prototype.title = '分隔线';
+    HrButton.prototype.title = 'Separatore';
 
     HrButton.prototype.htmlTag = 'hr';
 
@@ -4046,7 +4073,8 @@
 
     TableButton.prototype.icon = 'table';
 
-    TableButton.prototype.title = '表格';
+    //TableButton.prototype.title = '表格';
+    TableButton.prototype.title = 'Tabella';
 
     TableButton.prototype.htmlTag = 'table';
 
@@ -4220,7 +4248,8 @@
 
     TableButton.prototype.renderMenu = function() {
       var _this = this;
-      $('<div class="menu-create-table">\n</div>\n<div class="menu-edit-table">\n  <ul>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteRow"><span>删除行</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertRowAbove"><span>在上面插入行</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertRowBelow"><span>在下面插入行</span></a></li>\n    <li><span class="separator"></span></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteCol"><span>删除列</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertColLeft"><span>在左边插入列</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertColRight"><span>在右边插入列</span></a></li>\n    <li><span class="separator"></span></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteTable"><span>删除表格</span></a></li>\n  </ul>\n</div>').appendTo(this.menuWrapper);
+      //$('<div class="menu-create-table">\n</div>\n<div class="menu-edit-table">\n  <ul>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteRow"><span>删除行</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertRowAbove"><span>在上面插入行</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertRowBelow"><span>在下面插入行</span></a></li>\n    <li><span class="separator"></span></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteCol"><span>删除列</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertColLeft"><span>在左边插入列</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertColRight"><span>在右边插入列</span></a></li>\n    <li><span class="separator"></span></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteTable"><span>删除表格</span></a></li>\n  </ul>\n</div>').appendTo(this.menuWrapper);
+      $('<div class="menu-create-table">\n</div>\n<div class="menu-edit-table">\n  <ul>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteRow"><span>Cancella riga</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertRowAbove"><span>在上面插入行</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertRowBelow"><span>在下面插入行</span></a></li>\n    <li><span class="separator"></span></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteCol"><span>删除列</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertColLeft"><span>在左边插入列</span></a></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="insertColRight"><span>在右边插入列</span></a></li>\n    <li><span class="separator"></span></li>\n    <li><a tabindex="-1" unselectable="on" class="menu-item" href="javascript:;" data-param="deleteTable"><span>删除表格</span></a></li>\n  </ul>\n</div>').appendTo(this.menuWrapper);
       this.createMenu = this.menuWrapper.find('.menu-create-table');
       this.editMenu = this.menuWrapper.find('.menu-edit-table');
       this.createTable(6, 6).appendTo(this.createMenu);
@@ -4440,7 +4469,8 @@
 
     StrikethroughButton.prototype.icon = 'strikethrough';
 
-    StrikethroughButton.prototype.title = '删除线文字';
+    //StrikethroughButton.prototype.title = '删除线文字';
+    StrikethroughButton.prototype.title = 'Barrato';
 
     StrikethroughButton.prototype.htmlTag = 'strike';
 

@@ -24,12 +24,16 @@
               url: '/upload'
           } : false
         });
-
-        var $target = element.find('.simditor-body');
+        let tmp = element.find('div')//['div.simditor-body'];
+        var $target = _.find(tmp, function(el) {
+          return el.className === 'simditor-body'
+        })
+        console.log($target)
         
         function readViewText() {
 
-            ngModel.$setViewValue($target.html());
+            ngModel.$setViewValue($target.innerHTML);
+            //console.log($target.text(),$target.html())
 
             if (attrs.ngRequired != undefined && attrs.ngRequired != "false") {
                 
@@ -46,7 +50,7 @@
 
         ngModel.$render = function () {
           scope.simditor.focus();
-          $target.html(ngModel.$viewValue);
+          $target.innerHTML = ngModel.$viewValue
         };
 
         scope.simditor.on('valuechanged', function () {
